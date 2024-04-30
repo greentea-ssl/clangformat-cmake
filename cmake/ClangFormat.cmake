@@ -38,7 +38,7 @@ function(prefix_clangformat_setup prefix)
   if(TARGET clangformat)
     add_dependencies(clangformat ${prefix}_clangformat)
   else()
-    add_custom_target(clangformat DEPENDS ${prefix}_clangformat)
+    add_custom_target(clangformat ALL DEPENDS ${prefix}_clangformat)
   endif()
 endfunction()
 
